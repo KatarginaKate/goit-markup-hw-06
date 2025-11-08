@@ -212,7 +212,7 @@ img {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
   margin: 0 auto;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-screen-btn:hover,
 .main-screen-btn:focus {
@@ -309,7 +309,8 @@ img {
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--White);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-descr {
   font-size: 16px;
@@ -334,7 +335,7 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--Iris);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social .link:hover,
@@ -357,6 +358,10 @@ img {
   width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.portfolio-list-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 .portfolio-box {
   position: relative;
@@ -370,7 +375,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--Cloud);
   background-color: var(--Iris);
-  padding: 40px 32px 164px;
+  padding: 40px 32px;
   top: 0;
   left: 0;
   width: 100%;
@@ -406,13 +411,13 @@ img {
   background: var(--Navy-Blue);
   padding: 100px 0;
 }
-
-.footer-row {
+.container.footer-container {
   display: flex;
   flex-direction: row;
-  align-items: baseline
+  align-items: baseline;
 }
-.footer-content{
+
+.footer-content {
   margin-right: 120px;
 }
 .footer-logo {
