@@ -420,12 +420,14 @@ img {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  flex-shrink: 0;
-
 }
 
 .footer-content {
-  margin-right: 120px;
+ margin-right: 120px;
+}
+
+.footer-content.social {
+  margin-right: 80px;
 }
 .footer-logo {
   display: inline-block;
@@ -447,7 +449,7 @@ img {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: var(--Cloud);
-  /* max-width: 264px; */
+  width: 264px;
 }
 
 .footer-social {
@@ -472,13 +474,13 @@ img {
 
 .footer-content.form {
   margin-right: 0;
-
-}
+} 
 .subscribe-form {
   display: flex;
   gap: 24px;
 }
 .subscribe-input {
+  width: 264px;
   padding: 8px 16px;
   border: 1px solid var(--White);
   border-radius: 4px;
@@ -495,11 +497,11 @@ img {
   background-color: var(--Iris);
   gap: 16px;
   font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.04em;
-text-align: center;
-color: var(--White);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--White);
   border: none;
   border-radius: 4px;
   padding: 8px 24px;
