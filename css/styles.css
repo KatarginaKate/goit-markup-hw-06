@@ -8,6 +8,7 @@
   --Cloud: #f4f4fd;
   --Cornflower: #e7e9fc;
   --Green: #31d0aa;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
 }
 
 /* general */
@@ -659,13 +660,25 @@ img {
 }
 
 .checkbox-input {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--Iris);
-  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  overflow: hidden;
 }
 
 .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--White);
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
@@ -673,13 +686,57 @@ img {
   color: var(--Light-Slate);
 }
 
+.modal-form-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--navy-blue-modal);
+  background-color: transparent;
+}
+
+.modal-check {
+  opacity: 0;
+  fill: var(--White);
+}
+
+/* Hover */
+.checkbox-label:hover .modal-form-check {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus */
+.checkbox-input:focus + .checkbox-label .modal-form-check,
+.checkbox-input:focus-visible + .checkbox-label .modal-form-check {
+  border-radius: 2px;
+  fill: var(--Ocean);
+}
+
+/* Checked */
+.checkbox-input:checked + .checkbox-label .modal-form-check {
+  background-color: var(--Iris);
+  border-color: var(--Iris);
+}
+
+.checkbox-input:checked + .checkbox-label .modal-form-check .modal-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .privacy-link {
   line-height: 1.33333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--Iris);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.privacy-link:hover,
+.privacy-link:focus {
+  color: var(--Ocean);
+}
 .submit-btn {
   display: block;
   margin: 0 auto;
@@ -697,4 +754,9 @@ img {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit-btn:hover,
+.submit-btn:focus {
+  background: var(--Ocean);
 }
