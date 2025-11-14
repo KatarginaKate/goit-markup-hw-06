@@ -717,7 +717,7 @@ img {
 }
 
 .checkbox-input {
-  display: inline-block;
+  display: inline-flex;
   position: absolute;
   opacity: 0;
   width: 1px;
