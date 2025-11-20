@@ -230,6 +230,10 @@ img {
   pointer-events: auto;
 }
 
+.backdrop-mobile:not(.is-open).mobile-menu {
+  transform: translate(-50%, -100%);
+}
+
 /* Саме меню */
 .mobile-menu {
   position: absolute;
@@ -256,7 +260,6 @@ img {
   border-radius: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--Cornflower);
-  opacity: 0.1;
   display: flex;
   align-items: center;
   justify-content: center;
