@@ -195,17 +195,12 @@ img {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  fill: var(--Navy-Blue);
-}
-
-.mobile-menu-btn:hover,
-.mobile-menu-btn:focus {
-  fill: var(--Ocean);
 }
 
 .mobile-menu-icon {
   width: 24px;
   height: 24px;
+  fill: #2f2f37;
 }
 
 /* Бекдроп */
@@ -215,7 +210,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(46, 47, 66, 0.4);
+  background-color: var(--White);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -236,12 +231,11 @@ img {
 
 /* Саме меню */
 .mobile-menu {
-  position: absolute;
+  position: relative;
   right: 0;
   top: 0;
   width: 320px;
   height: 640px;
-  background-color: var(--White);
   padding: 24px 16px 40px 16px;
   display: flex;
   flex-direction: column;
@@ -296,13 +290,13 @@ img {
 .mobile-nav-link {
   font-size: 32px;
   font-weight: 700;
-  color: #2e2f42;
+  color: var(--Navy-Blue);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link:focus {
-  color: #4d5ae5;
+  color: var(--Iris);
 }
 
 /* Контакти */
@@ -315,10 +309,10 @@ img {
 
 .mobile-contacts-descr {
   font-weight: 500;
-font-size: 20px;
-line-height: 1.2;
-letter-spacing: 0.02em;
-color: var(--Slate);
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--Slate);
 }
 
 .mobile-contacts-descr:hover,
@@ -344,7 +338,7 @@ color: var(--Slate);
 }
 
 .mobile-socials-icon {
-fill: var(--Cloud)
+  fill: var(--Cloud);
 }
 
 .mobile-socials-link:hover,
@@ -405,7 +399,6 @@ fill: var(--Cloud)
   border: none;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1057,7 +1050,6 @@ fill: var(--Cloud)
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding: 0 16px;
   }
 
   .section {
@@ -1098,6 +1090,10 @@ fill: var(--Cloud)
     line-height: 1.17;
     letter-spacing: 0.04em;
     padding: 0;
+  }
+
+  .backdrop-mobile {
+    display: none;
   }
 
   .mobile-menu-btn {
@@ -1232,7 +1228,9 @@ fill: var(--Cloud)
     letter-spacing: 0.02em;
     padding: 24px 0;
   }
-
+  .backdrop-mobile {
+    display: none;
+  }
   /* Main Screen Desktop */
   .main-screen {
     padding: 188px 0;
