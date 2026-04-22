@@ -31,7 +31,7 @@ The layout is fully responsive and adapted for different screen sizes.
 ## 🛠 Tech Stack
 
 - HTML5
-- CSS3 (Flexbox, Grid)
+- CSS3 (Flexbox)
 - Responsive Design
 - JavaScript (ES6+)
 - Git & GitHub
